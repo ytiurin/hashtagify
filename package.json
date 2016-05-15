@@ -1,0 +1,24 @@
+{
+  "name": "hashtagify",
+  "version": "1.0.0",
+  "description": "Add hashtags to a title based on a description analysis.",
+  "main": "hashtagify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ytiurin/hashtagify.git"
+  },
+  "keywords": [
+    "twitter",
+    "hashtag",
+    "hashtagify"
+  ],
+  "author": "Eugene Tiurin <yevhentiurin@gmail.com> (https://github.com/ytiurin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ytiurin/hashtagify/issues"
+  },
+  "homepage": "https://github.com/ytiurin/hashtagify#readme"
+}

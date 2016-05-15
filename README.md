@@ -10,6 +10,11 @@ var myTitle = hashtagify(title,description,dictionary);
 // My title with the #RepeatingPhrase and an #Important word.
 ```
 
+### Install
+```
+npm install hashtagify
+```
+
 ### Configure
 ```javascript
 //Enable debug output to console

@@ -14,6 +14,10 @@ var myTitle = hashtagify(title,description,dictionary);
 ```
 npm install hashtagify
 ```
+or
+```
+bower install hashtagify
+```
 
 ### Configure
 ```javascript

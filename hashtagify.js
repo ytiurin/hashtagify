@@ -1,5 +1,11 @@
-(function (root, factory) {
+/*
+* Add hashtags to a title, relying on a description analysis.
+*
+* newTitle = hashtagify(title [,description [,dictionary]]);
+*/
 
+(function (root, factory) {
+  // UMD module definition
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);

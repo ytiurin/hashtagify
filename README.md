@@ -1,5 +1,5 @@
 # hashtagify
-Add hashtags to a title based on a description analysis.
+Add hashtags to a title, relying on a description analysis.
 
 ```javascript
 var title = "My title with the repeating phrase and an important word.";

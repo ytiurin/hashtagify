@@ -1,7 +1,7 @@
 /*
 * Add hashtags to a title, relying on a description analysis.
 *
-* newTitle = hashtagify(title [,description [,dictionary]]);
+* newTitle = hashtagify(title [,description [,vocabulary]]);
 */
 
 (function (root, factory) {
@@ -26,7 +26,7 @@
   var MIN_SEARCH_PHRASE_WORDS=2;
   var MIN_SEARCH_PHRASE_MATCHES=2;
 
-  var excludeDic=[
+  var excludeVoc=[
     'a',
     'all',
     'an',
@@ -74,7 +74,7 @@
     return n;
   }
 
-  var hashtagify=function(hashtagifyText,analyzeText,hashtagDictionary){
+  var hashtagify=function(hashtagifyText,analyzeText,userVocabulary){
 
     if(hashtagifyText&&analyzeText){
       var inputWords=hashtagifyText.split(/[\s:,!?\/"'\(\)–&“”]+/);
@@ -99,11 +99,11 @@
               continue;
 
             // search phrase should not contain Excluded word
-            if(searchWords.some(function(w){return excludeDic.indexOf(w.toLowerCase())>-1}))
+            if(searchWords.some(function(w){return excludeVoc.indexOf(w.toLowerCase())>-1}))
               continue;
 
             // search phrase should not start with Excluded word
-            // if(excludeDic.indexOf(searchWords[0].toLowerCase())>-1)
+            // if(excludeVoc.indexOf(searchWords[0].toLowerCase())>-1)
             //   continue;
 
             // search phrase should not start with .
@@ -197,13 +197,13 @@
       hashtagifyText=hashtagifyText.replace(new RegExp(finalMatch.replace(/\W/g,function(m){return '\\'+m}),'g'),'#'+finalMatch.charAt(0).toUpperCase()+finalMatch.substr(1));
     });
 
-    // hashtagify terms from user dictionary
-    if(hashtagDictionary){
+    // hashtagify terms from user vocabulary
+    if(userVocabulary){
       var termPos;
 
       hashtagifyText=' '+hashtagifyText;
-      for(i=hashtagDictionary.length;i--;)
-        if((termPos=hashtagifyText.toLowerCase().indexOf(' '+hashtagDictionary[i]))>-1){
+      for(i=userVocabulary.length;i--;)
+        if((termPos=hashtagifyText.toLowerCase().indexOf(' '+userVocabulary[i].toLowerCase()))>-1){
           termPos++;
           hashtagifyText=hashtagifyText.substr(0,termPos)+'#'+hashtagifyText.substr(termPos,1).toUpperCase()+hashtagifyText.substr(termPos+1);
         }

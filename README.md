@@ -1,5 +1,5 @@
 [![npm](https://img.shields.io/npm/v/hashtagify.svg?maxAge=2592000)](https://www.npmjs.com/package/hashtagify)
-[![Bower](https://img.shields.io/bower/v/hashtagify.svg?maxAge=2592000)](http://bower.io/search/?q=hashtagify)
+[![npm](https://img.shields.io/npm/dm/hashtagify.svg?maxAge=2592000)](https://www.npmjs.com/package/hashtagify)
 
 # hashtagify
 

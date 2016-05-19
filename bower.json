@@ -1,6 +1,6 @@
 {
   "name": "hashtagify",
-  "description": "Add hashtags to a title, relying on a description analysis.",
+  "description": "Replace frequently repeating word combinations with hashtags in title, analyzing article content.",
   "main": "hashtagify.js",
   "authors": [
     "Eugene Tiurin <yevhentiurin@gmail.com> (https://github.com/ytiurin)"

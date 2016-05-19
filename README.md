@@ -1,16 +1,16 @@
 # hashtagify
-Add hashtags to a title, relying on a description analysis. This script picks a number of phrases from the given title string and search them in the description string. If a number of phrase entrances in the description is more then 1, a phrase is considered to be a hashtag. Also a user vocabulary can be used to hashtag specific words.
+Replace frequently repeating word combinations with hashtags in title, analyzing article content. This module extracts words combinations from the given title string and search them in the content string. In case when the number of search entrances is more then `1`, search combination is considered to be a hashtag. The longest combinations are prioritized. Also user vocabulary can be used to hashtag specific words.
 
 ```javascript
 var title = "My title with the repeating phrase and an important word.";
-var description = "Description containing the same repeating phrase couple of times (repeating phrase)."
+var content = "Description containing the same repeating phrase couple of times (repeating phrase)."
 var vocabulary = ['important'];
 
-var newTitle = hashtagify(title,description,vocabulary);
+var newTitle = hashtagify(title,content,vocabulary);
 // My title with the #RepeatingPhrase and an #Important word.
 ```
 
-### Install
+## Install
 ```
 npm install hashtagify
 ```
@@ -19,7 +19,7 @@ or
 bower install hashtagify
 ```
 
-### Configure
+## Configure
 You can enable a debug mode to check a console hashtagifying process.
 
 ```javascript

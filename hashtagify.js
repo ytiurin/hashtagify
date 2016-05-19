@@ -1,7 +1,7 @@
 /*
-* Add hashtags to a title, relying on a description analysis.
+* Replace frequently repeating word combinations with hashtags in title, analyzing article content.
 *
-* newTitle = hashtagify(title [,description [,vocabulary]]);
+* newTitle = hashtagify(title [,content [,vocabulary]]);
 */
 
 (function (root, factory) {

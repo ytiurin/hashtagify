@@ -1,5 +1,11 @@
+[![npm](https://img.shields.io/npm/v/hashtagify.svg?maxAge=2592000)](https://www.npmjs.com/package/hashtagify)
+[![Bower](https://img.shields.io/bower/v/hashtagify.svg?maxAge=2592000)](http://bower.io/search/?q=hashtagify)
+
 # hashtagify
-Replace frequently repeating word combinations with hashtags in title, analyzing article content. This module extracts words combinations from the given title string and search them in the content string. In case when the number of search entrances is more then `1`, search combination is considered to be a hashtag. The longest combinations are prioritized. Also user vocabulary can be used to hashtag specific words.
+
+Replace frequently repeating word combinations with hashtags in title, analyzing article content.
+
+This module extracts words combinations from the given title string and search them in the content string. In case when the number of search entrances is more then `1`, search combination is considered to be a hashtag. The longest combinations are prioritized. Also user vocabulary can be used to hashtag specific words.
 
 ```javascript
 var title = "My title with the repeating phrase and an important word.";
